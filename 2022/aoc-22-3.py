@@ -5,13 +5,13 @@ def solution(data):
     with open(data) as input:
         for line in input.readlines():
             idx = len(line)//2
-            rucksacks[r_num] = (line[:idx], line[idx: -1])
+            rucksacks[r_num] = (line[:idx], line[idx:])
             r_num += 1
 
     # print(rucksacks)
     common = []
     for c1, c2 in rucksacks.values():
-        common.append(set(c1).intersection(set(c2)))
+        common.append(set(c1) & set(c2))
     
     sum = 0
 
@@ -44,7 +44,7 @@ def solution2(data):
     for rucksack in rucksacks.values():
         common_chars = set(rucksack[0])
         for r in rucksack[1:]:
-            common_chars = common_chars.intersection(set(r))
+            common_chars &= set(r)
         common.append(common_chars)
     
     sum = 0
