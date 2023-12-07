@@ -34,9 +34,9 @@ def solution2(data):
             # print(vals)
     return sum(vals)
             
-# print(solution('./data/sample1.txt'))
-# print(solution('./data/test1.txt'))
+print(solution('./data/sample1.txt'))
+print(solution('./data/test1.txt'))
 
-print(solution2('./data/sample1.txt'))
-print(solution2('./data/test1.txt'))
+# print(solution2('./data/sample1.txt'))
+# print(solution2('./data/test1.txt'))
 
